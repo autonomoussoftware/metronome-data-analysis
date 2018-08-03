@@ -1,0 +1,19 @@
+{
+  "eth": {
+    "url": "ETH_URL",
+    "net": "ETH_NET",
+    "retries": "ETH_RETRIES",
+    "concurrency": "ETH_CONCURRENCY"
+  },
+  "logger": {
+    "Console": {
+      "level": "LOGGER_CONSOLE_LEVEL"
+    },
+    "Papertrail": {
+      "host": "LOGGER_PAPERTRAIL_HOST",
+      "level": "LOGGER_PAPERTRAIL_LEVEL",
+      "port": "LOGGER_PAPERTRAIL_PORT",
+      "program": "LOGGER_PAPERTRAIL_PROGRAM"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "eth": {
+    "url": "ws://localhost:8546",
+    "net": "mainnet",
+    "retries": 15,
+    "concurrency": 50,
+    "timeout": 3000
+  },
+  "logger": {
+    "Console": {
+      "colorize": true,
+      "handleExceptions": true,
+      "humanReadableUnhandledException": true,
+      "level": "debug",
+      "timestamp": true
+    }
+  }
+}
