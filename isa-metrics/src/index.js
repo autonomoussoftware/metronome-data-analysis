@@ -68,10 +68,10 @@ function calculateStats ({ fromBlock, toBlock }) {
       // - Average fee paid
       return {
         transactionsCount: transfers.length,
-        medianNanoMETAmount: d3.median(transfers, transfer => transfer.event.returnValues._value),
-        averageNanoMETAmount: d3.mean(transfers, transfer => transfer.event.returnValues._value) / 1e18,
         uniqueAddresses: _.uniqBy(transfers, 'receipt.from').length,
-        averageFeePaid: d3.mean(transfers, transfer => transfer.receipt.gasUsed * transfer.transaction.gasPrice)
+        medianMETAmount: d3.median(transfers, transfer => transfer.event.returnValues._value) / 1e18,
+        averageMETAmount: d3.mean(transfers, transfer => transfer.event.returnValues._value) / 1e18,
+        averageFeePaid: d3.mean(transfers, transfer => transfer.receipt.gasUsed * transfer.transaction.gasPrice) / 1e18
       }
     })
 }
